@@ -508,7 +508,7 @@ blockquote {
 @media screen and (max-width: 700px) {
   .main .resultSection__text {
     padding: 1.5rem;
-    font-size: 98%;
+    font-size: 88%;
   }
 }
 .main .resultSection__text h2 {
