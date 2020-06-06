@@ -420,18 +420,20 @@ blockquote {
   font-display: swap;
   src: local("Cantarell Thin"), local("Cantarell-Thin"), url(Cantarell-Thin.otf);
 }
-.header__radios {
-  padding: 1rem;
-  font-size: 1.3em;
+.header {
+  background-image: url("https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+  background-position: center;
+  background-size: cover;
+  padding: 5rem 0;
+  font-family: "Cantarell", sans-serif;
 }
 .header__texts {
-  padding: 1rem 0;
-  background-color: #35bd62;
   color: #fdfdfd;
   text-align: center;
 }
 .header__texts__title {
   font-size: 4em;
+  margin-top: 1rem;
 }
 .header__texts__text {
   margin-top: -3rem;
@@ -440,7 +442,7 @@ blockquote {
 .searchForm {
   display: flex;
   justify-content: center;
-  padding: 2rem;
+  padding: 1rem;
 }
 .searchForm .search-input {
   padding: 0.5rem 6rem;
@@ -448,13 +450,36 @@ blockquote {
 .searchForm .search-button {
   width: fit-content;
   padding: 1.5rem;
-  background-color: #fa6666;
+  background-color: #9830ec;
   color: white;
   font-size: 1.4em;
   margin-left: 1rem;
 }
 .searchForm .search-button:active {
-  background-color: rgba(250, 102, 102, 0.377);
+  background-color: rgba(151, 48, 236, 0.514);
+}
+
+.main__radios {
+  padding: 1rem;
+  font-size: 1.3em;
+}
+.main .resultSection {
+  padding-top: 1rem;
+  padding-left: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .resultSection p {
+  font-size: 1.1em;
+}
+.main .resultSection h2 {
+  margin-top: -1rem;
+  color: #fd2264;
+}
+.main .resultSection h4 {
+  color: #757575;
+  margin-top: -2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

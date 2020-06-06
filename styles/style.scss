@@ -1,21 +1,25 @@
 @import "skeuos";
 
+$button : rgb(152, 48, 236);
+$button-light: rgba(151, 48, 236, 0.514);
+
 .header {
+    background-image: url("https://images.unsplash.com/photo-1576086213369-97a306d36557?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80");
+    background-position: center;
+    background-size: cover;
+    padding: 5rem 0;
+    font-family: "Cantarell", sans-serif;
 
-    &__radios {
-        padding: 1rem;
-        font-size: 1.3em;
 
-    }
+
 
     &__texts {
-        padding: 1rem 0;
-        background-color: rgb(53, 189, 98);
         color: rgb(253, 253, 253);
         text-align: center;
 
         &__title {
             font-size: 4em;
+            margin-top: 1rem;
         }
 
         &__text {
@@ -28,7 +32,7 @@
 .searchForm {
     display: flex;
     justify-content: center;
-    padding: 2rem;
+    padding: 1rem;
 
     .search-input {
         padding: .5rem 6rem;
@@ -37,13 +41,42 @@
     .search-button {
         width: fit-content;
         padding: 1.5rem;
-        background-color: rgb(250, 102, 102);
+        background-color: $button;
         color: rgb(255, 255, 255);
         font-size: 1.4em;
         margin-left: 1rem;
 
         &:active {
-            background-color: rgba(250, 102, 102, 0.377)
+            background-color: $button-light;
+        }
+    }
+}
+
+.main {
+    &__radios {
+        padding: 1rem;
+        font-size: 1.3em;
+    }
+
+    .resultSection {
+        padding-top: 1rem;
+        padding-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            font-size: 1.1em;
+        }
+
+        h2 {
+            margin-top: -1rem;
+            color: rgb(253, 34, 100);
+        }
+
+        h4 {
+            color: rgb(117, 117, 117);
+            margin-top: -2rem;
         }
     }
 }

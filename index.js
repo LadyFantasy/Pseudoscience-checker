@@ -32,6 +32,7 @@ function checkLanguage(e) {
     if (e.target === english) {
         location.reload()
     }
+    resultSection.innerHTML = ""
 }
 
 function createSearch(e) {
@@ -126,8 +127,8 @@ function resetButtonError() {
 function itsPseudo(title, description, url) {
     resultSection.appendChild(h2)
     resultSection.appendChild(h4)
-    h2.innerHTML = english.checked ? `It's a pseudoscience!` : `¡Es una pseudociencia!`
-    h4.innerHTML = english.checked ? `${title} is a ${description}` : `${title}: ${description}`
+    h2.innerHTML = english.checked ? `${title} it's a pseudoscience!` : `¡${title} es una pseudociencia!`
+    h4.innerHTML = description
 
     resetButtonError()
 }
@@ -136,8 +137,8 @@ function itsPseudo(title, description, url) {
 function itsReal(title, description, url) {
     resultSection.appendChild(h2)
     resultSection.appendChild(h4)
-    h2.innerHTML = english.checked ? `It's the real shit!` : `¡Es posta!`
-    h4.innerHTML = english.checked ? `${title} is a ${description}` : `${title}: ${description}`
+    h2.innerHTML = english.checked ? `${title} it's the real shit!` : `¡${title} es posta!`
+    h4.innerHTML = description
 
     resetButtonError()
 }

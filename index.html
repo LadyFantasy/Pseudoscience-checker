@@ -11,7 +11,16 @@
 
 <body>
     <header class="header">
-        <div class="header__radios">
+       
+        <div class="header__texts">
+            <h2 class="header__texts__title">Pseudoscience checker</h2>
+            <h4 class="header__texts__text">Check if a therapy or discipline it's quakery or the real shit
+            </h4>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main__radios">
             <label class="form-label">
                 <input class="form-radio form-radio-english" type="radio" name="language" value="English" checked>
                 English
@@ -22,23 +31,16 @@
                 Español
             </label>
         </div>
-        <div class="header__texts">
-            <h2 class="header__texts__title">Pseudoscience checker</h2>
-            <h4 class="header__texts__text">Write a therapy or discipline and check if it's quakery or the real shit
-            </h4>
-        </div>
-    </header>
+        <form class="searchForm">
+            <input type="search" class="search-input">
 
-    <form class="searchForm">
-        <input type="search" class="search-input">
+            <button type="submit" class="search-button">Search</button>
+        </form>
 
-        <button type="submit" class="search-button">Search</button>
-    </form>
+        <section class="resultSection">
 
-    <section class="resultSection">
-
-    </section>
-
+        </section>
+    </main>
 
     <script type="text/javascript" src="index.js"></script>
 </body>
