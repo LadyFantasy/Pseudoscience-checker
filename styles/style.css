@@ -441,6 +441,7 @@ blockquote {
   .header {
     font-size: 70%;
     line-height: normal;
+    padding: 3.5rem 0;
   }
 }
 .header__texts {
