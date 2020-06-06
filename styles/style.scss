@@ -3,10 +3,14 @@
 $button : rgb(152, 48, 236);
 $button-light: rgba(151, 48, 236, 0.514);
 
-html, body {
-    @media screen and (max-width: 900px) {
-        font-size: 90%;
+
+
+* {
+    &::-webkit-scrollbar {
+        display: none;
     }
+
+    
 }
 
 .header {
@@ -15,12 +19,15 @@ html, body {
     background-size: cover;
     padding: 5rem 0;
     font-family: "Cantarell", sans-serif;
+    font-weight: 700;
 
+    @media screen and (max-width: 900px) {
+        font-size: 90%;
+    }
     @media screen and (max-width: 700px) {
         font-size: 70%;
+        line-height: normal;
     }
-
-
 
     &__texts {
         color: rgb(253, 253, 253);
@@ -38,23 +45,22 @@ html, body {
 }
 
 
-
-
 .main {
 
-    @media screen and (max-width: 700px) {
-        font-size: 70%;
-    }
     &__radios {
         padding: 1rem;
         font-size: 1.3em;
     }
 
     .searchForm {
+        @media screen and (max-width: 700px) {
+            font-size: 80%;
+        }
+
         display: flex;
         justify-content: center;
         padding: 1rem;
-    
+
         .search-input {
             padding: .5rem 6rem;
 
@@ -62,20 +68,25 @@ html, body {
                 padding: .5rem 4rem;
             }
         }
-    
+
         .search-button {
             width: fit-content;
-            padding: 1.5rem;
+            padding: 0 1.5rem;
             background-color: $button;
             color: rgb(255, 255, 255);
-            font-size: 1.4em;
+            font-size: 1.5em;
             margin-left: 1rem;
-    
+
+            @media screen and (max-width: 900px) {
+                padding: 1rem;
+            }
+
             &:active {
                 background-color: $button-light;
             }
         }
     }
+
     .resultSection {
         display: flex;
         justify-content: center;
@@ -84,10 +95,19 @@ html, body {
         &__text {
             text-align: center;
 
+            @media screen and (max-width: 900px) {
+                font-size: 90%;
+            }
+            @media screen and (max-width: 700px) {
+                padding: 1.5rem;
+                font-size: 98%;
+            }
+
 
             h2 {
                 margin-top: -1rem;
                 color: rgb(253, 34, 100);
+                font-weight: bold;
             }
 
             h4 {
@@ -97,7 +117,7 @@ html, body {
         }
 
         p {
-            font-size: 1.1em;
+            font-size: 1.2em;
         }
 
 

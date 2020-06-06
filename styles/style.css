@@ -420,10 +420,8 @@ blockquote {
   font-display: swap;
   src: local("Cantarell Thin"), local("Cantarell-Thin"), url(Cantarell-Thin.otf);
 }
-@media screen and (max-width: 900px) {
-  html, body {
-    font-size: 90%;
-  }
+*::-webkit-scrollbar {
+  display: none;
 }
 
 .header {
@@ -432,10 +430,17 @@ blockquote {
   background-size: cover;
   padding: 5rem 0;
   font-family: "Cantarell", sans-serif;
+  font-weight: 700;
+}
+@media screen and (max-width: 900px) {
+  .header {
+    font-size: 90%;
+  }
 }
 @media screen and (max-width: 700px) {
   .header {
     font-size: 70%;
+    line-height: normal;
   }
 }
 .header__texts {
@@ -450,11 +455,6 @@ blockquote {
   margin-top: -3rem;
 }
 
-@media screen and (max-width: 700px) {
-  .main {
-    font-size: 70%;
-  }
-}
 .main__radios {
   padding: 1rem;
   font-size: 1.3em;
@@ -463,6 +463,11 @@ blockquote {
   display: flex;
   justify-content: center;
   padding: 1rem;
+}
+@media screen and (max-width: 700px) {
+  .main .searchForm {
+    font-size: 80%;
+  }
 }
 .main .searchForm .search-input {
   padding: 0.5rem 6rem;
@@ -474,11 +479,16 @@ blockquote {
 }
 .main .searchForm .search-button {
   width: fit-content;
-  padding: 1.5rem;
+  padding: 0 1.5rem;
   background-color: #9830ec;
   color: white;
-  font-size: 1.4em;
+  font-size: 1.5em;
   margin-left: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .main .searchForm .search-button {
+    padding: 1rem;
+  }
 }
 .main .searchForm .search-button:active {
   background-color: rgba(151, 48, 236, 0.514);
@@ -490,16 +500,28 @@ blockquote {
 .main .resultSection__text {
   text-align: center;
 }
+@media screen and (max-width: 900px) {
+  .main .resultSection__text {
+    font-size: 90%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .main .resultSection__text {
+    padding: 1.5rem;
+    font-size: 98%;
+  }
+}
 .main .resultSection__text h2 {
   margin-top: -1rem;
   color: #fd2264;
+  font-weight: bold;
 }
 .main .resultSection__text h4 {
   color: #757575;
   margin-top: -2rem;
 }
 .main .resultSection p {
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -85,7 +85,7 @@ function checkResults(results, title, description) {
 function checkPseudo(results, title, description) {
     const url = encodeURI(`https://en.wikipedia.org/wiki/${title}`);
 
-    const keyWords = ["pseudoscience", "pseudoscientific", "alternative", "quakery", "pseudociencia", "pseudocientífico", "pseudocientífica", "alternativa", "pseudoterapia", "not scientific", "pseudotherapy", "anticientífica"]
+    const keyWords = ["pseudoscience", "pseudoscientific", "alternative", "quakery", "pseudociencia", "pseudocientífico", "pseudocientífica", "alternativa", "pseudoterapia", "not scientific", "pseudotherapy", "anticientífica", "traditional", "tradicional"]
 
     if (keyWords.some(i => results.includes(i))) {
         itsPseudo(title, description, url)
