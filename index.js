@@ -55,8 +55,6 @@ function fetchResults(searchTerm) {
         fetch(endpoint)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
-                console.log(endpoint)
                 const title = data.displaytitle
                 const results = data.extract
                 const description = data.description ? data.description : data.extract
@@ -77,10 +75,8 @@ function checkResults(results, title, description) {
 
 
     if (keyWords.some(i => results.includes(i))) {
-        console.log("its a therapy")
         checkPseudo(results, title, description)
     } else {
-        console.log("enter a valid therapy")
         notValidTherapy()
     }
 }
@@ -92,10 +88,8 @@ function checkPseudo(results, title, description) {
     const keyWords = ["pseudoscience", "pseudoscientific", "alternative", "quakery", "pseudociencia", "pseudocientífico", "pseudocientífica", "alternativa", "pseudoterapia", "not scientific", "pseudotherapy", "anticientífica"]
 
     if (keyWords.some(i => results.includes(i))) {
-        console.log("it's shit")
         itsPseudo(title, description, url)
     } else {
-        console.log("it's for real")
         itsReal(title, description, url)
     }
 }

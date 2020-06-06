@@ -4,8 +4,8 @@ $button : rgb(152, 48, 236);
 $button-light: rgba(151, 48, 236, 0.514);
 
 html, body {
-    @media screen and (max-width: 750px) {
-        font-size: 80%;
+    @media screen and (max-width: 900px) {
+        font-size: 90%;
     }
 }
 
@@ -16,6 +16,9 @@ html, body {
     padding: 5rem 0;
     font-family: "Cantarell", sans-serif;
 
+    @media screen and (max-width: 700px) {
+        font-size: 70%;
+    }
 
 
 
@@ -38,6 +41,10 @@ html, body {
 
 
 .main {
+
+    @media screen and (max-width: 700px) {
+        font-size: 70%;
+    }
     &__radios {
         padding: 1rem;
         font-size: 1.3em;
@@ -50,6 +57,10 @@ html, body {
     
         .search-input {
             padding: .5rem 6rem;
+
+            @media screen and (max-width: 700px) {
+                padding: .5rem 4rem;
+            }
         }
     
         .search-button {
@@ -67,8 +78,6 @@ html, body {
     }
     .resultSection {
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
 
 

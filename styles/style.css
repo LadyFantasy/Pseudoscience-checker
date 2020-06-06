@@ -420,9 +420,9 @@ blockquote {
   font-display: swap;
   src: local("Cantarell Thin"), local("Cantarell-Thin"), url(Cantarell-Thin.otf);
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   html, body {
-    font-size: 80%;
+    font-size: 90%;
   }
 }
 
@@ -432,6 +432,11 @@ blockquote {
   background-size: cover;
   padding: 5rem 0;
   font-family: "Cantarell", sans-serif;
+}
+@media screen and (max-width: 700px) {
+  .header {
+    font-size: 70%;
+  }
 }
 .header__texts {
   color: #fdfdfd;
@@ -445,6 +450,11 @@ blockquote {
   margin-top: -3rem;
 }
 
+@media screen and (max-width: 700px) {
+  .main {
+    font-size: 70%;
+  }
+}
 .main__radios {
   padding: 1rem;
   font-size: 1.3em;
@@ -456,6 +466,11 @@ blockquote {
 }
 .main .searchForm .search-input {
   padding: 0.5rem 6rem;
+}
+@media screen and (max-width: 700px) {
+  .main .searchForm .search-input {
+    padding: 0.5rem 4rem;
+  }
 }
 .main .searchForm .search-button {
   width: fit-content;
@@ -470,8 +485,6 @@ blockquote {
 }
 .main .resultSection {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 .main .resultSection__text {
