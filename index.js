@@ -2,7 +2,7 @@ const input = document.querySelector(".search-input")
 const form = document.querySelector('.searchForm');
 const english = document.querySelector(".form-radio-english")
 const spanish = document.querySelector(".form-radio-spanish")
-const resultSection = document.querySelector(".resultSection")
+const resultSection = document.querySelector(".resultSection__text")
 const searchButton = document.querySelector(".search-button")
 const headerTexts = document.querySelector(".header__texts")
 const headerTitle = document.querySelector(".header__texts__title")
@@ -24,6 +24,7 @@ searchButton.addEventListener("click", () => {
 })
 
 function checkLanguage(e) {
+    resultSection.classList.remove("paper")
     if (e.target === spanish) {
         searchButton.innerText = "Buscar"
         headerTitle.innerText = "Verificador de pseudosciencia"
@@ -125,6 +126,7 @@ function resetButtonError() {
 
 
 function itsPseudo(title, description, url) {
+    resultSection.classList.add("paper")
     resultSection.appendChild(h2)
     resultSection.appendChild(h4)
     h2.innerHTML = english.checked ? `${title} it's a pseudoscience!` : `¡${title} es una pseudociencia!`
@@ -135,9 +137,10 @@ function itsPseudo(title, description, url) {
 
 
 function itsReal(title, description, url) {
+    resultSection.classList.add("paper")
     resultSection.appendChild(h2)
     resultSection.appendChild(h4)
-    h2.innerHTML = english.checked ? `${title} it's the real shit!` : `¡${title} es posta!`
+    h2.innerHTML = english.checked ? `${title} it's the real deal!` : `¡${title} es posta!`
     h4.innerHTML = description
 
     resetButtonError()
