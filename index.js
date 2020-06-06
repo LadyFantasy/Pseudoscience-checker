@@ -123,7 +123,7 @@ function itsPseudo(title, description, url) {
     resultSection.classList.add("paper")
     resultSection.appendChild(h2)
     resultSection.appendChild(h4)
-    h2.innerHTML = english.checked ? `${title} it's a pseudoscience!` : `¡${title} es una pseudociencia!`
+    h2.innerHTML = english.checked ? `${title} is a pseudoscience!` : `¡${title} es una pseudociencia!`
     h4.innerHTML = description
 
     resetButtonError()
@@ -134,7 +134,7 @@ function itsReal(title, description, url) {
     resultSection.classList.add("paper")
     resultSection.appendChild(h2)
     resultSection.appendChild(h4)
-    h2.innerHTML = english.checked ? `${title} it's the real deal!` : `¡${title} es posta!`
+    h2.innerHTML = english.checked ? `${title} is the real deal!` : `¡${title} es posta!`
     h4.innerHTML = description
 
     resetButtonError()
