@@ -55,6 +55,7 @@ function fetchResults(searchTerm) {
         fetch(endpoint)
             .then(res => res.json())
             .then(data => {
+                console.log(data.extract)
                 const title = data.displaytitle
                 const results = data.extract
                 const description = data.description ? data.description : data.extract
@@ -71,7 +72,7 @@ function fetchResults(searchTerm) {
 
 function checkResults(results, title, description) {
 
-    const keyWords = ["alternative therapy", "terapia alternativa", "medicina alternativa", "alternative medicine", "therapy", "terapia", "medical treatment", "tratamiento", "especialidad médica", "branch of medicine", "medical specialty", "academic discipline", "medical discipline", "medical therapy", "therapeutics techniques", "therapeutic technique", "práctica terapéutica"]
+    const keyWords = ["alternative therapy", "terapia alternativa", "medicina alternativa", "alternative medicine", "therapy", "terapia", "medical treatment", "tratamiento", "especialidad médica", "branch of medicine", "medical specialty", "academic discipline", "medical discipline", "medical therapy", "therapeutics techniques", "therapeutic technique", "práctica terapéutica", "discipline", "disciplina", "pseudoscience", "pseudociencia", "paranormal", "pseudocientificas", "pseudocientíficos", "pseudocientíficas", "medicina tradicional" ]
 
 
     if (keyWords.some(i => results.includes(i))) {
@@ -85,7 +86,7 @@ function checkResults(results, title, description) {
 function checkPseudo(results, title, description) {
     const url = encodeURI(`https://en.wikipedia.org/wiki/${title}`);
 
-    const keyWords = ["pseudoscience", "pseudoscientific", "alternative", "quakery", "pseudociencia", "pseudocientífico", "pseudocientífica", "alternativa", "pseudoterapia", "not scientific", "pseudotherapy", "anticientífica", "traditional", "tradicional"]
+    const keyWords = ["pseudoscience", "pseudoscientific", "pseudoscientifics", "pseudocientíficas", "pseudocientificas", "pseudocientíficos", "alternative", "quakery", "pseudociencia", "pseudocientífico", "pseudocientífica", "alternativa", "pseudoterapia", "not scientific", "pseudotherapy", "anticientífica", "traditional", "tradicional", "paranormal", "conjunto de creencias"]
 
     if (keyWords.some(i => results.includes(i))) {
         itsPseudo(title, description, url)
