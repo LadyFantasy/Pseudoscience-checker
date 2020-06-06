@@ -1,0 +1,49 @@
+@import "skeuos";
+
+.header {
+
+    &__radios {
+        padding: 1rem;
+        font-size: 1.3em;
+
+    }
+
+    &__texts {
+        padding: 1rem 0;
+        background-color: rgb(53, 189, 98);
+        color: rgb(253, 253, 253);
+        text-align: center;
+
+        &__title {
+            font-size: 4em;
+        }
+
+        &__text {
+            margin-top: -3rem;
+        }
+    }
+}
+
+
+.searchForm {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+
+    .search-input {
+        padding: .5rem 6rem;
+    }
+
+    .search-button {
+        width: fit-content;
+        padding: 1.5rem;
+        background-color: rgb(250, 102, 102);
+        color: rgb(255, 255, 255);
+        font-size: 1.4em;
+        margin-left: 1rem;
+
+        &:active {
+            background-color: rgba(250, 102, 102, 0.377)
+        }
+    }
+}
