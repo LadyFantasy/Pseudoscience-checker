@@ -525,4 +525,20 @@ blockquote {
   font-size: 1.3em;
 }
 
+.footer {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.footer .footer-text {
+  font-size: 1.3em;
+}
+.footer .footer-text a {
+  color: #fd2264;
+}
+
 /*# sourceMappingURL=style.css.map */
