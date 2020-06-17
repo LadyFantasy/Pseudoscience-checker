@@ -8,7 +8,6 @@ const headerTexts = document.querySelector(".header__texts")
 const headerTitle = document.querySelector(".header__texts__title")
 const headerText = document.querySelector(".header__texts__text")
 
-
 const paragraph = document.createElement("p")
 const h2 = document.createElement("h2")
 const h4 = document.createElement("h4")
@@ -116,7 +115,7 @@ function notValidTherapy() {
 
 function resetButtonError() {
     input.value = ""
-    searchButton.innerText = english.checked ? "Search Again" : "Buscar de nuevo"
+    searchButton.innerText = english.checked ? "Search again" : "Volvé a probar"
 }
 
 

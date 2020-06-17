@@ -29,6 +29,7 @@ $button-light: rgba(151, 48, 236, 0.514);
         font-size: 70%;
         line-height: normal;
         padding: 3.5rem 0;
+        padding: 1rem 0;
     }
 
     &__texts {
@@ -38,6 +39,11 @@ $button-light: rgba(151, 48, 236, 0.514);
         &__title {
             font-size: 4em;
             margin-top: 1rem;
+
+            @media screen and (max-width: 700px) {
+                line-height: 3rem;
+                margin-bottom: 3rem;
+            }
         }
 
         &__text {
@@ -78,9 +84,14 @@ $button-light: rgba(151, 48, 236, 0.514);
             color: rgb(255, 255, 255);
             font-size: 1.5em;
             margin-left: 1rem;
+            text-transform: none;
 
             @media screen and (max-width: 900px) {
                 padding: 1rem;
+            }
+
+            @media screen and (max-width: 500px) {
+                font-size: 1.2em;
             }
 
             &:active {
@@ -103,7 +114,7 @@ $button-light: rgba(151, 48, 236, 0.514);
 
             @media screen and (max-width: 700px) {
                 padding: 1.5rem;
-                font-size: 88%;
+                font-size: 82%;
             }
 
 
@@ -111,11 +122,19 @@ $button-light: rgba(151, 48, 236, 0.514);
                 margin-top: -1rem;
                 color: rgb(253, 34, 100);
                 font-weight: bold;
+                font-size: 2.3em;
+
+                @media screen and (max-width: 600px) {
+                    line-height: 2.3rem;
+                    padding-bottom: .5rem;
+                }
             }
 
             h4 {
                 color: rgb(117, 117, 117);
                 margin-top: -2rem;
+                padding-bottom: 1rem;
+                font-size: 2em;
             }
         }
 
@@ -131,13 +150,13 @@ $button-light: rgba(151, 48, 236, 0.514);
     width: 100vw;
     position: absolute;
     bottom: 0;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
+    padding: .8rem 0;
     display: flex;
     justify-content: center;
+    background-color: rgba(0, 0, 0, 0.904);
 
     .footer-text {
-        font-size: 1.3em;
+        font-size: 1.2em;
 
         a{
             color: rgb(253, 34, 100);

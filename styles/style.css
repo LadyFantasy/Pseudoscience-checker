@@ -442,6 +442,7 @@ blockquote {
     font-size: 70%;
     line-height: normal;
     padding: 3.5rem 0;
+    padding: 1rem 0;
   }
 }
 .header__texts {
@@ -451,6 +452,12 @@ blockquote {
 .header__texts__title {
   font-size: 4em;
   margin-top: 1rem;
+}
+@media screen and (max-width: 700px) {
+  .header__texts__title {
+    line-height: 3rem;
+    margin-bottom: 3rem;
+  }
 }
 .header__texts__text {
   margin-top: -3rem;
@@ -485,10 +492,16 @@ blockquote {
   color: white;
   font-size: 1.5em;
   margin-left: 1rem;
+  text-transform: none;
 }
 @media screen and (max-width: 900px) {
   .main .searchForm .search-button {
     padding: 1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .main .searchForm .search-button {
+    font-size: 1.2em;
   }
 }
 .main .searchForm .search-button:active {
@@ -509,17 +522,26 @@ blockquote {
 @media screen and (max-width: 700px) {
   .main .resultSection__text {
     padding: 1.5rem;
-    font-size: 88%;
+    font-size: 82%;
   }
 }
 .main .resultSection__text h2 {
   margin-top: -1rem;
   color: #fd2264;
   font-weight: bold;
+  font-size: 2.3em;
+}
+@media screen and (max-width: 600px) {
+  .main .resultSection__text h2 {
+    line-height: 2.3rem;
+    padding-bottom: 0.5rem;
+  }
 }
 .main .resultSection__text h4 {
   color: #757575;
   margin-top: -2rem;
+  padding-bottom: 1rem;
+  font-size: 2em;
 }
 .main .resultSection p {
   font-size: 1.3em;
@@ -529,13 +551,13 @@ blockquote {
   width: 100vw;
   position: absolute;
   bottom: 0;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+  padding: 0.8rem 0;
   display: flex;
   justify-content: center;
+  background-color: rgba(0, 0, 0, 0.904);
 }
 .footer .footer-text {
-  font-size: 1.3em;
+  font-size: 1.2em;
 }
 .footer .footer-text a {
   color: #fd2264;
